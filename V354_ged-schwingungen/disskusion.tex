@@ -1,0 +1,18 @@
+\input{Pack.tex}
+\usepackage[locale=DE,separate-uncertainty=true,per-mode=symbol-or-fraction]{siunitx}
+\begin{document}
+  \section{Disskusion}
+  \label{sec:Disskusion}
+Zum Abschluss werden nun Auffälligkeiten und Unterschiede von theoretischen und experimentellen Werten näher untersucht.
+Der Unterschied vom erechneten effektiven Widerstand $R_{eff}$ und dem im Schaltkreis eingesetzten beträgt, wenn man kleine Messungenauigkeiten vernachlässigt
+etwa $\SI{150}{\ohm}$, was der Wert der des Innenwiderstandes des Funktionengenerators mit $\SI{50}{\ohm}$ nicht vollständig erklärt werden kann.
+Der große Unterschied könnte seinen Urpsrung in der mit $\SI{2000}{\hertz}$ vergleichsweise niedrigen angelegten Frequenz haben oder möglicherweise in einem ungenau gewählten Nullpunkt des Oszilloskops.
+
+Der nächste zu betrachtende Wert ist $R_{ap}$ der Widerstand des aperiodischen Grenzfalls, hier ist ein Unterschied von etwa $\SI{1,4}{\ohm}$ zu vermerken, dieser rührt daher,
+dass in der Rechnung der Widerstand anderer Bauteile vernachlässigt werden (z.B. Spule) und von der experimentellen Seite ein genaues Einstellen und Ablesen nicht sicher gegeben werden konnte.
+
+Die folgende Werte zur Güte $q = 3,72 $ liegt mit Abweichung $\frac{\Delta q}{q} \approx 5\%$ im erwarteten Toleranzbereich.
+Weiter liegt auch die Breite der Resonazkurve beim Untersuchen der Frequnezabhängigkeit der Kondensatorspannung mit $\frac{\Delta (\nu_+-\nu_-)}{\nu_+-\nu_-} \approx 10\%$ noch am Rand des zu erwartenden Bereichs;
+mit der gegeben Schärfe des Oszilloskops, was für die sichtbar großen Fehler in (Abb. 2) verantwortlich ist sind beide Werte mit annehmbarer Genauigkeit bestimmt
+Bei der Phasenuntersuchungen zeigen sich Fehler, die mit $0,05 Hz$ für \nu_{\text{res}}, $0,28 Hz$ für \nu_1 und $0,20 Hz$ für \nu_2 kaum über die Schärfe der theoretischen Werte hinausgehen.
+Der Grund dafür, dass der Fit der arctan-Funktion die in (Abb. 4) zu sehenden großen Abweichungen zeigt, ist wahrscheinlich, dass keine Werte über $40 kHz$ genommen worden sind und somit die Asymptote vom Programm ohne Basis erzeugt werden muss.

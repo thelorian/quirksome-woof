@@ -1,0 +1,6 @@
+PWD C:/Users/leonard/Atom_projects/Praktikum/V_354/5
+INPUT c:/texlive/2015/texmf.cnf
+INPUT c:/texlive/2015/texmf-dist/web2c/texmf.cnf
+INPUT c:/texlive/2015/texmf-var/web2c/pdftex/pdflatex.fmt
+INPUT ./Protokoll-354.tex
+OUTPUT Protokoll-354.log

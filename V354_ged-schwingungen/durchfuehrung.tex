@@ -1,0 +1,34 @@
+% !TEX program = lualatex
+\documentclass{scrartcl}
+\usepackage{polyglossia}
+\begin{document}
+
+
+    \section{Durchführung}
+    \label{sec:Durchführung}
+    Als erstes wird an den gegebenen Schwingkreis mit vorab bekannten Größen L,R,C
+    eine Nadelpulsspannung angelegt und parallel zum Kondensator wird ein Oszilloskop angeschlossen.
+    Nun stellt man die Frequenz des Nadelpuls' so ein, dass man nach dem jeweiligen Puls Relaxionsverhalten beobachten kann
+    (die Spannung sollte mindestens um $\frac{1}{e}$ abgenommen haben).
+    Von der enstehenden Abbildung einer gedäpften (Co-)Sinusschwingung wird der Thermodruck genommen,
+    und bei den Extrema der Funktion werden jeweils Zeit seit dem Nadelpuls und Amplitude gemessen.
+
+    Um den Grenzwiderstand $R_ap$ für den aperiodischen Grenzfall zu bestimmen wird nun,
+    anstatt einem statischen R ein regelbarer Widerstand in den Schwingkreis geschaltet.
+    Dieser wird von seinem Maximalwert so weit reduziert, dass sich eine sichtbare Überschwingung ausbildet
+    und dann zurück auf eben den Wert eingestellt wo das Oszilloskop das erste mal eindeutig dem relaxionsverhalten eines geladenen Kondensators gleicht
+    Der an diesem Punkt abzulesende Widerstand wird notiert.
+
+    Zur Messung des Verhaltens des getriebenen Schwingkreises wird eine Wechselspannung and den Schwingkreis gelegt
+    und zum Abgleich auf den zweiten Kanal des Oszilloskops gespeist.
+    Als erstes wird die Amplitude der angelegten Wechselspannung aufgenommen
+    und im Folgenden wird die Frequenz $\nu$ am Sinusgenerator variiert.
+    Es sollte darauf geachtet werden, dass die Messabstände bei stärkeren Änderungen entsprechend kleiner zu wählen sind.
+
+    Als Abschluss wird $\Phi(\omega)$ bestimmt die Phasenverschiebung, die der Schwingkreis aufgrund seiner Impedanz hervorruft.
+    Zunächst wird die Erregerfrequenz klein gehalten, sodass die Erregung überwiegt und beide Wellen phasengleich sind
+    und justiert das Oszilloskop so, dass bei beiden Wellen die Nulldurchgänge im selben punkt liegen.
+    Und nun variiert man wie zuvor die Frequenz und misst die entstehenden Abstände zwischen den Nulldurchgängen.
+
+
+\end{document}

@@ -1,0 +1,6 @@
+PWD C:/Users/leonard/Atom_projects/Praktikum
+INPUT c:/texlive/2015/texmf.cnf
+INPUT c:/texlive/2015/texmf-dist/web2c/texmf.cnf
+INPUT c:/texlive/2015/texmf-var/web2c/pdftex/pdflatex.fmt
+INPUT ./Disskusion.tex
+OUTPUT Disskusion.log

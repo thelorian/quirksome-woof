@@ -1,0 +1,137 @@
+% !TEX program = lualatex
+\documentclass{scrartcl}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{unicode-math}
+\usepackage{mathtools}
+\usepackage{fontspec}
+\usepackage{polyglossia}
+\begin{document}
+
+
+    \section{Zielsetung}
+    In diesem Versuch werden anhand eines LRC-Schwingkreises die verschieden Lösungen der Schwingungsgleichung untersucht.
+    Es werden gemessen: der effektive Widerstand im Fall der homogenen gedämpften Schwingung,
+    der Widerstand bei dem der aperiodische Grenzfall eintritt und inhomogenen Fall die Resonanzfrequenz, sowie die Phasenverschiebung,
+    die der Schwingkreis verusacht.
+
+
+    \section{Theorie}
+    \subsection{Schwingungsgleichung}
+    \label{sub:Schwingungsgleichung}
+
+    \label{sec:Theorie}
+    Der gegebene, wie auch der standard LRC-Reihenschwingkreis besteht aus Einer Induktivität L, einem ohmschen Widerstand R und einer Kapazität C.
+    Im Idealfall ($R=0$) wird nur zwischen der Induktivität und der Kapazität harmonisch Energie ausgetauscht, ist $R > 0$ so nimmt diese auch exponentiell ab,
+    da sie vom Widerstand des Stromkreises in Wärme umgesetzt wird.
+
+    Aus der Maschenregel (2. kirchhoffsches Gesetz) folgt, dass die Summe der Spannungen in einem geschlossenen Stromkreis gleich Null ein müssen, also muss gelten:
+    \begin{equation}
+        U_L(t)+U_R(t)+U_C(t)=0.
+        \label{eqn:Krichhoff2}
+    \end{equation}
+    Für die gegebenen Spannungen gelten die Identitäten
+    \begin{align*}
+        U_L &= \dot{I}L \\
+        U_R &= IR  \\
+        U_C &= \frac{Q}{C}.
+    \end{align*}
+    Dies ergibt mit $I=\dot{Q}$ die homogene Schwingungsgleichung in I:
+    \begin{equation}
+        L\ddot{I}+R\dot{I}+\frac{1}{C}I=0
+        \label{eqn:Schwingungsgleichung}
+    \end{equation}
+    Die Lösung für diese DGL lautet
+    \begin{equation}
+        I(t)=e^{-2\pi\mu t}(A_0e^{2\pi\nu it}+A_1e^{-2\pi\nu it})
+        \label{eqn:Fundamentalsys}
+    \end{equation}
+    mit
+    \begin{align}
+        \mu &= \frac{R}{4\pi L}\\
+        \text{und}\\
+        \nu &= \frac{1}{2\pi}\sqrt{\frac{1}{LC}-\frac{R^2}{4L^2}}
+    \end{align}
+
+    Der Verlauf der entsprechenden Ladungs- bzw. Spannungskurve hängt nun davon ab,
+    ob $\nu$ reelwertig ist oder echt komplexe Werte annimmt:
+    \begin{equation*}
+        \nu \in \mathbb{R} \iff \frac{1}{LC} > \frac{R^2}{4L^2}.
+    \end{equation*}
+
+    Mit $e^{i\phi}= cos(\phi)+isin(\phi)$ und (\ref{eqn:Fundamentalsys}) folgt dann:
+    \begin{equation}
+        I(t) = e^{-2\pi\mu t}cos(2\pi\nu t)
+    \end{equation}
+    Die Zeit, zu der Exponent genau -1 ist nennt man Abklingdauer:
+    \begin{equation}
+        T_{ex} := \frac{1}{2\pi\mu}.
+        \label{eqn:Abkling}
+    \end{equation}
+    Für $\nu = 0$ tritt der sog. aperiodische Grenzfall ein,
+    wo $I(t)$ durch nur eine Exponentialfunktion beschrieben werden kann und es somit zu keiner Schwingung kommt.
+    In diesem Fall nähert sich die Auslenkung am schnellsten Null von allen Lösungen der DGL.
+    \subsubsection{Getriebene Schwingung}
+    \label{subs:Getriebene Schwingung}
+
+    Im weitern Verlauf des Versuchs wird ein mit einer Wechselspannung getriebener Schwingkreis
+    untersucht. Die Differentialgleichung muss daher um  eine Inhomogenität der Form:
+    \begin{equation*}
+        U_0e^{i\omega_0 t}
+    \end{equation*}
+    ergänzt werden.Nachdem sich das System eingeschwungen hat und $\omega =\omega_0$ gilt berechnet sich die Spannung am Schwingkreis mit
+    \begin{equation}
+        |U(t)| = U_0\sqrt{\frac{(1-LC\omega^2)^2+\omega^2R^2C^2}{((1-LC\omega^2)^2+\omega^2R^2C^2)}}
+    \end{equation}
+    Mit der komplexen Phase
+    \begin{equation}
+        \label{eqn:Phase}
+        \phi(\omega) = atan\left(\frac{-\omega RC}{1-LC\omega^2}\right).
+    \end{equation}
+    Da gilt $|U_C|=|U(t)|$, folgt
+    \begin{equation}
+        U_C(\omega)=\frac{U_0}{\sqrt{(1-LC\omega^2)^2+\omega^2R^2C^2}}
+    \end{equation}
+    An dieser Formel kann man erkennen, dass gilt
+    \begin{align}
+    {\omega &= 0 \implies U_C = U_0} ,
+
+    \text{und außerdem, dass für große}
+    \omega : U_C &\propto \frac{1}{\omega^2} \rightarrow 0.
+    \end{align}
+    Für Phasen $\Phi_1,\Phi_2$ bei  $\frac{\pi}{4}$ und $\frac{3}{4} \pi$ respektive gilt:
+    \begin{equation}
+        \label{eqn:Spektrum}
+        \omega_{1,2}=\pm \frac{R}{2L}+\sqrt{\frac{R^2}{4L^2}+\frac{1}{LC}}
+    \end{equation}
+    Außerdem gilt für die Resonanzfrequenz
+    \begin{equation}
+        \label{eqn:ResFrequenz}
+        \omega_{res} = \sqrt{\frac{1}{LC}-\frac{R^2}{2L^2}} ,
+    \end{equation}
+    wo der Maximalwer von $U_C(\omega)$ erreicht wird, der i.d.R. deutlich höher ist als U_0.
+
+     Wenn die Dämpfung schwach ist, also gilt
+     \begin{equation*}
+         \frac{R^2}{2L^2}\ll \frac{1}{LC} ,
+     \end{equation*}
+     so vereinfacht sich das Problem auf eine ungedämpfte Schwingung, bei der die Eigenfrequenz des Schwingkreises dann gegeben ist durch
+     \begin{equation}
+         \omega_0 = \sqrt{\frac{1}{LC}} .
+     \end{equation}
+
+     Für diesen Fall gilt dann $\omega_{res} \approx \omeaga_0$ und daher
+     \begin{equation}
+         \label{eqn:Güte}
+         U_C(\omega_{res})= qU_0
+         \text { mit }
+          q=\frac{1}{\omega_0 RC}
+     \end{equation}
+     Man nennt q dann die Güte des Schwingkreises. Zusätzlich wird gewöhnlich auch die Breite der Resonanzkurve von $U_C(\omega)$ angegeben
+     mit der Näherung
+     \begin{equation}
+         \label{eqn:Breite}
+         \omega_+ -\omega_- \approx \frac{R}{L} .
+     \end{equation}
+
+\end{document}
