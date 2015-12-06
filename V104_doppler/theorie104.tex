@@ -1,0 +1,40 @@
+\section{Zielsetzung}
+In diesem Versuch soll der Doppler-Effekt untersucht und mit seiner Hilfe die Schallgeschwindigkeit in Luft bestimmt werden.
+Der Effekt wird auf zwei verschiedene Weisen bestimmt: durch Vor- und Zurückbewegen eines Lautsprechers, bei Aufnahme der Frequenz,
+und durch Vor- und Zurückbewegen einer Platte an der die Schallwelle reflektiert wird und Messung des Frequenzunterschiedes
+aus der entstehenden Schwebung mit der Grundfrequenz des Lautsprechers.
+
+
+
+\section{Theorie}
+\label{sec:Theorie}
+Bei Wellenphänomenen in nicht-starrer Mechanik kommt es vor,
+dass sich Erzeuger einer Welle und Empfänger, also der Ort, wo die Welle gemessen wird,
+in Relativbewegung zueinander befinden. Ist dies der Fall so tritt der besagte Doppler_effekt auf,
+d.h. dass die sich empfangene Frequenz $f_0$ unterscheidet von der Frequenz, die die Quelle aussendet.
+Befindet sich die Quelle in Ruhe und der Empfänger bewegt sich, so ändert sich die von ihm empfangene Frequenz um $f_0 \frac{v}{c}$,
+sodass gilt
+\begin{equation}
+    \label{eqn:E}
+    f_E = f_0(\left 1+\frac{v}{c})\right
+\end{equation}
+mit $f_E$ der empfangenen Frequenz, $v$ der vorzeichenbehafteten Geschwindigkeit des Empfängers und $c$ der Ausbreitungsgeschwindigkeit der Welle.
+Ist $v$ negativ mit $\abs{v} > c$ wird die Frequenz offensichtlich nicht negativ, sondern $0$, da die Welle den Empfänger nicht mehr erreichen kann.
+\\
+Im Falle einer bewegten Quelle verhält sich der Effekt ähnlich, doch da es ein Medium gibt, was als fest angenommen werden muss, reicht es nicht,
+das betrachtete Intertialsystem stattdessen in die Quelle zu legen, sondern es muss eine gesonderte Betrachtung gemacht werden.
+Dabei ändert sich dann die empfangene Frequenz reziprok und es ergibt sich
+\begin{equation}
+    \label{eqn:Q}
+    f_Q = f_0(\left \frac{1}{1-\frac{v}{c}})\right
+\end{equation}
+wobei $f_Q$ die emfangene Frequenz bei bewegter Quelle bezeichnet.
+\\
+Für $\abs{v} \ll c$ gilt aber $\ref{eqn:E} \approx \ref{eqn:Q}$ und es spielt nur das Vorzeichen und der Betrag von $v$ eine Rolle.
+
+\\
+Auch elektromagnetische Wellen erfahren den Doppler-Effekt doch da ihr Medium der Raum selbst ist und dieser sich mit dem Bezugssystem verändert,
+kann man nicht wie zuvor das Messsystem so legen, dass das Medium fest ist und kann folglich nicht mehr unterscheiden, ob Quelle oder Empfänger sich bewegen und erhält also die empfangene Frequenz als
+\begin{equation}
+    f = f_0 (\left \frac{\sqrt{1-\fac{v^2}{c_0^2}}}{1-\frac{v}{c_0}}
+\end{equation}

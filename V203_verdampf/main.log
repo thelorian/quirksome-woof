@@ -1,0 +1,33 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Arch Linux) (preloaded format=pdftex 2015.12.3)  6 DEC 2015 14:03
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**./main.tex
+(./main.tex
+! I can't find file `{pack.tex}'.
+l.1 \input{pack.tex}
+                    
+(Press Enter to retry, or Control-D to exit)
+Please type another input file name: q
+(/usr/share/texmf-dist/tex/latex/tools/q.tex File ignored
+)
+! Undefined control sequence.
+l.3 \begin
+          {document}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! I can't find file `{./auswertung203.tex}'.
+l.4   \input{./auswertung203.tex}
+                                 
+(Press Enter to retry, or Control-D to exit)
+Please type another input file name
+! Emergency stop.
+l.4   \input{./auswertung203.tex}
+                                 
+*** (job aborted, file error in nonstop mode)
+
+!  ==> Fatal error occurred, no output PDF file produced!

@@ -1,0 +1,41 @@
+%!TEX program = lualatex
+\documentclass{scrartcl}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{unicode-math}
+\usepackage{mathtools}
+\usepackage{fontspec}
+\usepackage{polyglossia}
+
+
+
+\begin{document}
+
+
+\section{Fehlerrechnung}
+\label{sec:Fehlerrechnung}
+
+Alle Mittelwerte, sofern nicht anders vermerkt werden mit dem arithmetischen Mittel:
+\begin{equation}
+    \overline{x}  = \frac{1}{N} \sum_{i=1}^N x_i
+\end{equation}
+berechnet.\\
+Der statistische Fehler dieses Wertes wird berechnet mit
+\begin{equation}
+    \Delta\overline{x} = \frac{1}{\sqrt{N}}\sqrt{\frac{1}{N-1}\sum_{i=1}^N (x_i-\overline{x})^2}}.
+\end{equation}
+Werden Fehlergrößen zur weiteren Berechnung genutzt, so wird der Fehler im Resultat
+mit der Gauß'schen Fehlerfortpflanzung berechnet:
+\begin{equation}
+\Delta f = \sqrt{\sum_{i=1}^N \left(\frac{\partial f}{\partial x_i}\right)^2(\Del{x_i})}
+\end{equation}
+
+Auftretende Ausgleichsgraden werden berechnet nach der linearen Regression mit
+\begin{align}
+    y &= ax+b\\
+    a &= \frac{\overline{xy}-\overline{x}\overline{y}}{\overline{x^2}-\overline{x}^2}\\
+    b &= \frac{\overline{x^2}\overline{y}-\overline{y}\overline{xy}}{\overline{x^2}-\overline{x}^2}
+\end{align}
+
+
+\end{document}
