@@ -4,47 +4,67 @@
 \subsection{Bestimmung der Gerätekonstanten}
 \label{sub:subsection label}
 
-Als erstes, bevor mit dem gegebenen Gerät gemessen werden kann müssen erst die geräteigenen Größen der Winkelrichtgröße $D$ und des Eigentträgheitsmoments $I_D$ bestimmt werden,
-Dafür wurde zunächst der Abstand $r = (16,95 \pm 0,1)mm$ des betrachteten Punktes von der Drehachse gemessen,
-Der von dem an diesem Punkt senkrecht aufliegenden Federkraftmesser (senkrecht aus dem Grund, dass die skalare Formel des Kreutzproduktes aus ( )  verwendet werden kann)
-erzwungene Winkel wird zusammen mit der abgelesenen Kraft mithilfe von ( ) in die Winkelrichtgröße verrechenet:
-
+Als erstes, bevor mit dem gegebenen Gerät gemessen werden kann, müssen die geräteigenen Größen 
+der Winkelrichtgröße $D$ und des Eigentträgheitsmoments $I_{text{D}}$ bestimmt werden.
+Dafür wurde zunächst der Abstand 
+\begin{align*}
+  r = \num{16,95(0,1)}\si{\milli\metre}
+\end{align*} 
+des betrachteten Punktes von der Drehachse gemessen.
+Der von dem an diesem Punkt senkrecht aufliegenden Federkraftmesser (senkrecht aus dem Grund, dass die skalare Formel des Kreuzproduktes von $M$  verwendet werden kann)
+erzwungene Winkel wird zusammen mit der abgelesenen Kraft mithilfe von (4) in die Winkelrichtgröße verrechnet:
 \begin{table}
 \centering
-\caption{Kraft bei Auslenkung um \phi und errechnetes D}
-\label{tab:Dicke}
-\begin{tabular}{ S[table-format=2,0] S[table-format=1,3] S[table-format=1,4]}
+\caption{Kraft bei Auslenkung um $\varphi$ und errechnetes $D$.}
+\begin{tabular}{ S[table-format=1,3] S[table-format=1,3] S[table-format=1,4]}
 \toprule
-$\phi/\text{Grad}$ & $F/\SI{\newton}$ & $D/ \SI{\newton \meter}$\\
+$\varphi\:/\:\text{rad}$ & $F\:/\:\si{\newton}$ & $D_{\text{stat}}\:/\:\si{\newton \metre}$\\
 \midrule
-20    &  0,095 & 0,0461\\
-45    &  0,160 & 0,0345\\
-60    &  0,190 & 0,0307\\
-80    &  0,235 & 0,0285\\
-90    &  0,260 & 0,0281\\
-100   &  0,280 & 0,0272\\
-120   &  0,320 & 0,0259\\
-130   &  0,40  & 0,0299\\
-150   &  0,45  & 0,0291\\
-180   &  0,51  & 0,0275\\
+
+0,349  &  0,095 & 0,0461\\
+0,785  &  0,160 & 0,0345\\
+1,047  &  0,190 & 0,0307\\
+1,396  &  0,235 & 0,0285\\
+1,570  &  0,260 & 0,0281\\
+1,745  &  0,280 & 0,0272\\
+2,094  &  0,320 & 0,0259\\
+2,269  &  0,40  & 0,0299\\
+2,618  &  0,45  & 0,0291\\
+3,142  &  0,51  & 0,0275\\
 \bottomrule
 \end{tabular}
 \end{table}
 
-Der Mittelwert dieser berechneten Werte ergibt $D = (0,0308 \pm 0,0061)\SI{\newton \meter}$,
+Der Mittelwert dieser berechneten Werte ergibt 
+\begin{align*}
+  D_{\text{stat}} = \num{3,08(0,61)e-2}\si{\newton\meter}.
+\end{align*}
 
-Um nun noch das Trägheitsmoment zu bestimmen, trägt man $T^2$ gegen $a^2$ auf (siehe Abb. ) und berechnet man den Ordinaten-Abschnitt mit linearer Regression.
-Es ergeben sich die Werte $m = \num{8,574e-4} \si{\second\squared\per\milli\meter\squared} \text{ und } \num{4.0726} \si{\second\squared}$.
-Es wurden zwei Metallzylinder mit den Maßen $l = (29,98 \pm 0,25) mm ; r = (17,63 \pm 0,28) mm ; m_{\text{Zyl}} = 222,60 \pm 1,18) g$ zur Messung verwendet.
+Um nun noch das Trägheitsmoment zu bestimmen,
+wird $T^2$ gegen $a^2$ aufgetragen (siehe Abb. ) und der Ordinaten-Abschnitt mit linearer Regression berechnet. 
+Es ergeben sich die Werte 
+\begin{align*}
+m &= \num{8,57(0,13)e-4} \si{\second\squared\per\milli\metre\squared} \\
+b &=\num{4.1(0,4)} \si{\second\squared}\\
+\text{mit}
+T^2 &= m \cdot a^2 + b.
+\end{align*}
+Es wurden zwei Metallzylinder mit den Maßen 
+\begin{align*}
+  l &= \num{29,98(0,25)}\si{\milli\metre}\\
+  r &= \num{17,63(0,28)}\si{\milli\metre} \\
+  m_{\text{Zyl}} &= \num{222,60(1,18)}\si{\gram}
+\end{align*}
+ zur Messung verwendet.
 \begin{table}
 \centering
-\caption{Periodendauern $T$ in Abhängigkeit vom Abstand $a$}
+\caption{Periodendauern $T$ in Abhängigkeit vom Abstand $a$.}
 
 \begin{tabular}{ S[table-format=3,2] S[table-format=1,3] S[table-format=5,0] S[table-format=2,3]}
 \toprule
-$a/mm$ & $T/s$ &$a^2/mm^2$&$T^2/s^2$\\
+$a\:/\:\si{\milli\metre}$ & $T\:/\:\si{\second}$ &$a^2\:/\:\si{\milli\metre\squared}$&$T^2\:/\:\si{\second\squared}$\\
 \midrule
-54,1  & 2,652  &  2926  & 7,033 \\
+54,1   & 2,652  &  2926  & 7,033 \\
 77,49  & 3,012 &  6004  & 9,072 \\
 95,64  & 3,378 &  9147  & 11,410\\
 114,2  & 3,848 &  13041 & 14,807\\
@@ -58,105 +78,148 @@ $a/mm$ & $T/s$ &$a^2/mm^2$&$T^2/s^2$\\
 \end{tabular}
 \end{table}
 
-Mit den Formeln für das Trägheitsmoment des Zylinders, dem steinerschen Satz und ( ) erhält man also für $D_{\text{dyn}}$ und $I_D$
+\begin{figure}
+  \centering
+  \includegraphics[width=\textwidth]{figure.pdf}
+  \caption{Plot zur linearen Regression von $a^2$ zu $T^2$.}
+\end{figure}
+
+
+Mit den Formeln für das Trägheitsmoment des Zylinders, dem steinerschen Satz 
+und (2) erhält man also für $D_{\text{dyn}}$ und $I_D$
 \begin{align*}
-    D_{\text{dyn}} = \frac{8\pi^2m_\text{Zyl}}{m}
-    T &= 2\pi \cD_{\text{dyn}}ot \sqrt{\frac{1}{D_{\text{dyn}}}(I_D_{\text{dyn}}+2I_\text{Zyl})} =2\pi \cD_{\text{dyn}}ot \sqrt{\frac{1}{D_{\text{dyn}}}(I_D_{\text{dyn}}+2 m\text{Zyl}(\frac{r^2}{4}+\frac{l^2}{12}+2 m\text{Zyl}a^2))}
-    T^2 &= 4\pi^2 \cD_{\text{dyn}}ot 2\frac{ m\text{Zyl}}{D_{\text{dyn}}}a^2 + 4\pi \cD_{\text{dyn}}ot \frac{1}{D_{\text{dyn}}}(I_D_{\text{dyn}}+2 m_\text{Zyl}(\frac{r^2}{4}+\frac{l^2}{12}))
-    &\i m\text{Zyl}plies b = 4\pi \cD_{\text{dyn}}ot \frac{1}{D_{\text{dyn}}}(I_D_{\text{dyn}}+2 m\text{Zyl}(\frac{r^2}{4}+\frac{l^2}{12}))
-    &\iff I_D_{\text{dyn}} = \frac{bD_{\text{dyn}}}{4\pi^2}-2(\frac{r^2}{4}+\frac{l^2}{12}).
+    T &= 
+    2\pi \cdot \sqrt{\frac{1}{D_{\text{dyn}}}(I_D+2I_\text{Zyl})}\\
+    &=
+    2\pi \cdot \sqrt{\frac{1}{D_{\text{dyn}}}(I_D+2 m_\text{Zyl}(\frac{r^2}{4}+\frac{l^2}{12})+2 m_\text{Zyl}a^2)}\\
+    T^2 &=
+    4\pi^2 \cdot 2\frac{m\text{Zyl}} {D_{\text{dyn}}}a^2 + 4\pi^2 \cdot \frac{1}{D_{\text{dyn}}}(I_D+2 m_\text{Zyl}(\frac{r^2}{4}+\frac{l^2}{12}))\\
+    
+    \implies b &= 4\pi^2 \cdot \frac{1}{D_{\text{dyn}}}\cdot(I_D+2 m_\text{Zyl}(\frac{r^2}{4}+\frac{l^2}{12}))\\
+    m &= 8\pi^2\cdot\frac{m_\text{Zyl}}{D_\text{dyn}}\\
+    \iff I_D 
+    &= \frac{bD_{\text{dyn}}}{4\pi^2}-2(\frac{r^2}{4}+\frac{l^2}{12})\\
+    D_{\text{dyn}}
+    &= 8\pi \cdot \frac{m_{\text{Zyl}}}{m}.
+    
+    \leftarrow D_{\text{dyn}} &= 8\pi^2\frac{m_{\text{Zyl}}}{m} = \num{2,05(0,033)e-2}\si{\newton\meter\squared} \\    
+    \text{und}\\
+    I_D &= \frac{bD_{\text{dyn}}}{4\pi^2}-2(\frac{r^2}{4}+\frac{l^2}{12}) = \num{1,81(0,21)e-3} \si{\kilogram \meter \squared}
 \end{align*}
 
-\begin{equation*}
 
-    \leftarrow D_{\text{dyn}} =  \num{2,05e-2}\si{\newton\meter\squared}    \text{und} I_D = \num{2,049e-3} \si{\kilogram \meter \squared}
-\end{equation*}
-
-
-\subsubsection{Bestimmung des Trägheitsmoents einfacher Körper}
+\subsubsection{Bestimmung des Trägheitsmoments einfacher Körper}
 \label{subs:Bestimmung des Trägheitsmoents einfacher Körper}
 
 Nun werden die Trägheitsmomente von einfachen Körpern mit der dynamischen Methode bestimmt.
-Die Maße der Kugel wurden bestimmt als $ r = (13,743 \pm 0,034) cm;  m = 812.5 g$, die des Zylinders als $ r = (8,118 \pm 0,074) cm; l = (14,183 \pm 0,076) mm; m = 1973,8 g$.
-Das Trägheitsmoment wird bestimmt aus den gemessenen Umlaufzeiten
+Die Maße der Kugel wurden bestimmt als 
+\begin{align*}
+  r &= \num{13,743(0,034)}\si{\centi\metre}  \\
+  m &= \num{812,5}\si{\gram}, \\
+  \text{die des Zylinders als}\\
+  r &= \num{8,118(0,074)}\si{\centi\metre} \\
+  l &= \num{14,183(0,076)}\si{\centi\metre}\\
+  m &= \num{1973,8}\si{\gram}.
+\end{align*}
+Das Trägheitsmoment wird bestimmt aus den gemessenen Umlaufzeiten (Tabelle 3)
 \begin{table}
-\centering
-\caption{Periodendauern $T$ für Kugel und Zylinder}
-
-\begin{tabular}{c S[table-format=1,3] S[table-format=1,3]}
-\toprule
-$Messung #$  & $T_{\text{Kugel}}/s$ &$T_{\text{Zylinder}}/s $\\
-\midrule
-1&    1,754 &     1,686\\
-2&    1,636 &     1,666\\
-3&    1,626 &     1,692\\
-4&    1,652 &     1,692\\
-5&    1,63  &     1,706\\
-6&    1,63  &     1,686\\
-7&    1,664 &     1,68 \\
-\midrule
-Mittelwert & 1,656  &1,687
-Fehler &   0,045    &0,012
-\bottomrule
-\end{tabular}
+  \centering
+  \caption{Periodendauern $T$ für Kugel und Zylinder.}
+  \begin{tabular}{c S[table-format=1,3] S[table-format=1,3]}
+    \toprule
+    $Messung $  & $T_{\text{Kugel}}\:/\:s$ &$T_{\text{Zylinder}}\:/\: $ \\
+    \midrule
+    1&    1,754 &     1,686\\
+    2&    1,636 &     1,666\\
+    3&    1,626 &     1,692\\
+    4&    1,652 &     1,692\\
+    5&    1,63  &     1,706\\
+    6&    1,63  &     1,686\\
+    7&    1,664 &     1,68 \\
+    \midrule
+    Mittelwert & 1,656  &1,687
+    Fehler &   0,045    &0,012
+    \bottomrule
+  \end{tabular}
 \end{table}
 
-Es folgt aus ( ) für die Trägheitmomente:
+Es folgt aus ( ) für die Trägheitmomente mit $D$ aus der dynamischen Methode:
 \begin{align*}
-    I_\text{Kugel} &= 2,139 \cdot 10^{-3}
-    I_\text{Zylinder} &= 2,220 \cdot 10^{-3}.
+    I_\text{Kugel,dyn} &= \num{3,23(0,23)e-3}\si{\kilogram\metre\squared} \\
+    I_\text{Zylinder,dyn} &= \num{3,29(0,22)}\si{\kilogram\metre\squared}\\
+    \text{und $D$ aus der statischen:}\\
+    I_\text{Kugel,stat} &= \num{3,9(0,5)e-3}\si{\kilogram\metre\squared} \\
+    I_\text{Zylinder,stat} &= \num{4,0(0,5)}\si{\kilogram\metre\squared}.\\
 \end{align*}
 
-Die Trägheit theoretischen Werte für diese ergeben sich aus den Formeln für die einfachen Trägheitsmomente durch den Schwerpunkt:
+Die theoretischen Werte für diese Träghitsmomente ergeben sich aus den Formeln für die einfachen Trägheitsmomente durch den Schwerpunkt:
 \begin{align*}
-    I_\text{Kugel,theo} &= \frac{2}{5}mr^2 = 6,148 \cdot 10^{-3}
-    I_\text{Zylinder,theo} &= \frac{1}{2}mr^2 = 6,501 \cdot 10^{-3}.
+    I_\text{Kugel,theo} &= \frac{2}{5}mr^2 = \num{6,138(0,03)e-3}\si{\kilogram\metre\squared} \\
+    I_\text{Zylinder,theo} &= \frac{1}{2}mr^2 = \num{6,50(0,12)e-3}\si{\kilogram\metre\squared}.
 \end{align*}
 
 \subsubsection{Bestimmung des Trägheitsmoments einer humanoiden Holzpuppe}
 \label{subs:Bestimmung des Trägheitsmoments einer humanoiden Holzpuppe}
 
-Analog zu \ref{subs:Bestimmung des Trägheitsmoents einfacher Körper} werden nun die experimentellen Trägheitsmomente der Puppe in ihren zwei Haltungen berechnet.
-Die Messwerte sind :
+Analog zu 5.1.1 werden nun die experimentellen Trägheitsmomente der Puppe in ihren zwei Haltungen berechnet.
+Die Messwerte sind:
 
 \begin{table}
-\centering
-\caption{Periodendauern $T$ für Figur}
-
-\begin{tabular}{c S[table-format=1,3] S[table-format=1,3]}
-\toprule
-$Messung #$ & $T_{\text{Pos1}}/s$ &$T_{\text{Pos2}}/s $\\
-\midrule
-1&   0,568  &  0.814    \\
-2&   0,564  &  0.806    \\
-3&   0,59   &  0.814    \\
-4&   0,552  &  0.818    \\
-5&   0,572  &  0.814    \\
-6&   0,504  &  0.812    \\
-7&   0,552  &  0.806    \\
-\midrule
-Mittelwert & 0,557  & 0,812
-Fehler &   0,027    &0,004
-\bottomrule
-\end{tabular}
+  \centering
+  \caption{Periodendauern $T$ für Figur.}
+  \begin{tabular}{c S[table-format=1,3] S[table-format=1,3]}
+    \toprule
+    $Messung$ & $T_{\text{Pos1}}\:/\:\si{\seconds}$ &$T_{\text{Pos2}}\:/\:\si{\seconds} $\\
+    \midrule
+    1&   0,568  &  0.814    \\
+    2&   0,564  &  0.806    \\
+    3&   0,59   &  0.814    \\
+    4&   0,552  &  0.818    \\
+    5&   0,572  &  0.814    \\
+    6&   0,504  &  0.812    \\
+    7&   0,552  &  0.806    \\
+    \midrule
+    Mittelwert  & 0,557  & 0,812\\
+    Fehler      & 0,027  & 0,004\\
+    \bottomrule
+  \end{tabular}
 \end{table}
 
 und es folgen also
 \begin{align*}
-    I_{\text{Pos1}} &= 2,240 \cdot 10^{-4}
-    I_{\text{Pos2}} &= 5,144 \cdot 10^{-4}.
+    I_{\text{Pos1}} &= \frac{D}{4\pi^2}T_{\text{Pos1}}^2
+    = \begin{cases} 
+    D_{\text{dyn}}  &
+    \num{1,61(0,16)e-4}\si{\kilogram\metre\squared}\\
+    D_{\text{stat}} &
+    \num{2,4(0,5)e-4}\si{\kilogram\metre\squared}
+  \end{cases}
+    I_{\text{Pos2}} &= \frac{D}{4\pi^2}T_{\text{Pos2}}^2 
+    = \begin{cases}
+    D_{\text{dyn}} &
+    \num{3,42(0,06)e-4}\si{\kilogram\metre\squared}\\
+    D_{\text{stat}} &
+    \num{5,1(1)e-4}\si{\kilogram\metre\squared}
+    \end{cases}.
 \end{align*}
 
-Zur Berechnung der jeweiligen Trägheitsmomente sind alle Teile der Puppe an verschiedenen Stellen ausgemssen worden.
-Über alle wird hier gemittelt und es wird von einer homogenen Massenverteilung ausgegangen. Das heißt die Masse eine Teils der Puppe proprtional ist
+Zur Berechnung der jeweiligen Trägheitsmomente 
+sind alle Teile der Puppe an verschiedenen 
+Stellen ausgemessen worden.
+Über alle wird hier gemittelt und
+es wird von einer homogenen Massenverteilung ausgegangen. 
+Das heißt, die Masse eine Teils der Puppe
+ist proportional zum Volumen de Teils 
+im Vergleich zum Gesamtvolumen.
 Alle Einzelteile der Puppe werden als Zylinder angenommen.
 
-
-
 \begin{table}
-    \begin{tabular}{c S[table-format=2,2] S[table-format=2,2] S[table-format=2,2] S[table-format=2,2] S[table-format=2,2]}
+  
+  \caption{Länge und verschiedene Dicken der einzelnen Körperteile.}
+  \begin{tabular}{c S[table-format=2,2] S[table-format=2,2] S[table-format=2,2] S[table-format=2,2] S[table-format=2,2]}
     \toprule
-    $Teil  $ & $Länge  l/mm$ & $Dicke_{1} d/mm $ & $Dicke_{2} d/mm $ & $Dicke_{3} d/mm $ & $Dicke_{4} d/mm $ & $Dicke_{5} d/mm $\\
+    $Teil  $ & $l\:/\:\si{\milli\metre}$ & $d\:/\:\si{\milli\metre} $ & $d\:/\:\si{\milli\metre} $ & $d\:/\:\si{\milli\metre} $ &
+    $ d\:/\:\si{\milli\metre}$ & $d \:/\:\si{\milli\metre} $ \\
     \midrule
     \text{Figur_\text{ganz}}   & 252    \\
     \text{Kopf}                & 54,48   &  31,00   &   25,40   & 15,64     \\
@@ -166,58 +229,67 @@ Alle Einzelteile der Puppe werden als Zylinder angenommen.
     \text{Bein_\text{rechts}}  & 154,30  &  17,00   &   31,38   &  16,90    & 12,30 & 17,10 \\
     \text{Bein_\text{links}}   & 149,32  &  16,68   &   20,90   &  16,58    & 12,76 & 16,10 \\
     \bottomrule
+  \end{tabular}
+\end{table}
+
+Es ergeben sich für die einzelnen Teile durch Mittelung der Werte für beide Arme und Beine:
+
+\begin{table}
+    \caption{Mittelwerte der Längen und Dicken aus Tabelle 5.}
+    \begin{tabular}{c S[table-format=2,2] @{${}\pm{}$} S[table-format=2,2] S[table-format=2,2] S[table-format=2,2] @{${}\pm{}$} S[table-format=2,2]}
+    \toprule 
+    \text{Teil}\multicolumn {2}{c}{$l\:/\:\si{\milli\metre}$} & \multicolumn {2}{c}{$d\:/\:\si{\milli\metre}$}  \\
+    \midrule
+
+    \text{Kopf}   & 54,48     &     &  24,01 & 7,77   \\
+    \text{Torso}  & 98,22     &     &  35,49 & 6,39   \\
+    \text{Arm}    & 140,05 & 1,34   &  13,54 & 2,946   \\
+    \text{Bein}   & 151,81 & 3,52   &  17,77 & 5,346   \\
+    \bottomrule
     \end{tabular}
 \end{table}
 
-es ergeben sich für die einzelnen Teile durch Mittelung der Werte für beide Arme und Beine:
-
-\begin{table}
-    \begin{tabular}{c S[table-format=2,2] S[table-format=2,2] S[table-format=2,2] S[table-format=2,2] S[table-format=2,2]}
-    \toprule
-    $Teil  $ & $Länge  l/mm$ & $Dicke d/mm $ //
-    \midrule
-
-    \text{Kopf}                & 54,48          &  24,01 \pm 7,77       \\
-    \text{Torso}               & 98,22          &  35,49 \pm 6,39       \\
-    \text{Arm}                 & 140,05 \pm 1,34&  13,54 \pm 2,946      \\
-    \text{Bein}                & 151,81 \pm 3,52&  17,77 \pm 5,346      \\
-    \bottomrule
-    \end{tabular}
-    \end{table}
-
 Damit ist das Gesamtvolumen der Figur
 \begin{equation*}
-    V_\text{ges} = \num{1,796e-4} \si{\meter\cubed}
+    V_\text{ges} = \num{1,36(0,35)e-4} \si{\meter\cubed}
 \end{equation*}
 
-und die Massen der Glieder mit $m_x = \frac{V_\text{x}}{V_\text{ges}}m_\text{ges}$ und $m_\text{ges} = 162,53 $
+und die Massen der Glieder mit 
+\begin{align*}
+  m_x &= \frac{V_\text{x}}{V_\text{ges}}m_{\text{ges}}}\\
+  \text{und}\\ 
+  m_{\text{ges}} &= \num{162,53}\si{\gram}.
+\end{align*}
+
 
 \begin{table}
-    \begin{tabular}{c S[table-format=2,2] }
+    \caption{Massenverteilung auf die einzelnen Körperteile.}
+    \begin{tabular}{c S[table-format=2,1] @{${}\pm{}$} S[table-format=2,1] }
     \toprule
-    $Teil  $ & $Masse m/g$ //
+    Teil   & \multicolumn {2}{c}{$m\:/\:\si{\gram}$} //
     \midrule
 
-    \text{Kopf}                &  22,32     \\
-    \text{Torso}               &  87,93      \\
-    \text{Arm}                 &  9,12       \\
-    \text{Bein}                &  17,04        \\
+    \text{Kopf}                &  29,5 &  17     \\
+    \text{Torso}               &  64,3 &  19,6   \\
+    \text{Arm}                 &  12   &  5,4    \\
+    \text{Bein}                &  22,3 &  10,7     \\
     \bottomrule
     \end{tabular}
 \end{table}
 
 Mit diesen Werten dergibt sich für die einzelnen Trägheitsmomente
 \begin{align*}
-    I_{\text{Kopf}} &= \num{1,608e-6}
-    I_{\text{Torso}} &= \num{1,384e-5}
-    I_{\text{Arm}} &=   \num{2,09e-7}
-    I_{\text{Bein}} &=  \num{6,73e-7}
+    I_{\text{Kopf}} &= \num{1,5(1,9)e-6}\si{\kilogram\metre\squared}\\
+    I_{\text{Torso}} &= \num{7,1(4,8)e-6}\si{\kilogram\metre\squared}\\
+    I_{\text{Arm}} &=   \num{1,9(1,6)e-7}\si{\kilogram\metre\squared}\\
+    I_{\text{Bein}} &=  \num{2,5(0,8)e-6}\si{\kilogram\metre\squared}\\
 
 \end{align*}
 
 und mit dem Steinerschen Satz folgt dann mit dem Abstand $a$ von der Drehachse gleich dem Radius des Torsos
 \begin{align*}
-    I_{\text{ges,Pos1}} = \num{4,805e-4}
+    I_{\text{ges,Pos1}} &= I_{\text{Kopf}}+I{\text{Torso}}+2\cdot(I_{\text{Arm}}+
+    I_{\text{Bein}}+a^2(m_{\text{Arm}}+m_{\text{Bein}}))  &=\num{2,5(0,8)e-5}\si{\kilogram\metre\squared}.
 \end{align*}
 
-Da die Figur in der zweiten Pose in der sie gemessen wurde nur die Arme nach oben gestreckt sind anstatt am Körper anzuligen und sich daher der Abstand zur Drehachse nicht ändert ist auch das Trägheitsmoment das selbe.
+Da die einzige Änderung der Pose, von Pose1 auf Pose2 die ist, dass die Arme nach oben gestreckt sind anstatt am Körper anzuligen und sich daher der Abstand zur Drehachse nicht ändert ist auch das theoretische Trägheitsmoment das selbe.

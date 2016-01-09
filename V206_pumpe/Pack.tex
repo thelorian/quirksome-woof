@@ -1,0 +1,79 @@
+\documentclass[parskip=half, titlepage=firstiscover, captions=tableheading, bibliography=totoc]{scrartcl}
+%optionen immer variieren tabelheading bei tabellen
+%ohne parskip nur einrücken
+%draft macht hüllen von bilder selbst wenn sie nicht existieren um einfach zeit bei compilieren zu sparen
+%\usepackage{scrhack} % nach \documentclass
+\usepackage{float}
+\floatplacement{figure}{htbp}
+\floatplacement{table}{htbp}
+\usepackage[aux]{rerunfilecheck}
+\usepackage{polyglossia}
+\usepackage{biblatex}
+\addbibresource{Tag3.bib}%name der bib-Datei hier einfügen !
+\setmainlanguage{german}
+\usepackage{longtable}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage{fontspec}
+\usepackage[
+math-style=ISO,
+bold-style=ISO,
+sans-style=italic,
+nabla=upright,
+partial=upright,
+]{unicode-math}
+
+\setmathfont{Latin Modern Math}
+\usepackage{graphicx}
+\usepackage{grffile}
+\usepackage[font = scriptsize, labelfont = bf,margin={10pt,10pt}]{subcaption}
+\usepackage[font = scriptsize, labelfont = bf,margin={10pt,10pt}]{caption}
+%anstatt margin geht auch width = 10cm
+\usepackage{mleftright}
+%schöneres mit  \mleft (\mright)
+
+\setlength{\delimitershortfall}{-1sp}
+%bei vielen Klammern werden sie nun größer
+\usepackage[locale=DE,separate-uncertainty=true,per-mode=symbol-or-fraction]{siunitx}
+\usepackage{booktabs}
+\usepackage{xfrac}
+\usepackage{pdflscape}
+%-> dazu wäre begin{landscape} etc nötig
+
+%nur ein beispiel zu dieser änderung wenn man will
+%gleiche sachen werden bei mathe oder text anders benutzt
+%\let\vaccent=\v % alten Befehl kopieren
+%\RenewDocumentCommand \v {} % Befehl überschreiben
+%{
+%\TextOrMath{
+%\vaccent % Textmodus
+%}{
+%\symbf % Mathemodus
+%}
+%}
+
+%\NewDocumentCommand \OverfullCenter {+m} {
+%\noindent\makebox[\linewidth]{#1} }
+%bei zu breiten pics zentrierte ausrichtung
+%zu befehl wäre dann: \OverfullCenter{\includegraphics[width=\textwidth+15pt]{figures/
+%Panorama.jpg}}
+
+\AtBeginDocument{ % wird bei \begin{document} ausgeführt
+\let\symIm=\Im % werden sonst wieder von unicode-math überschrieben
+\RenewDocumentCommand \Re {}
+{
+\operatorname{Re}
+}
+\let\symIm=\Im
+\RenewDocumentCommand \Im {}
+{
+\operatorname{Im}
+}
+}
+
+
+\usepackage{fontspec}%nach amssymb
+\usepackage[unicode]{hyperref}
+\usepackage[shortcuts]{extdash} % nach hyperref, bookmark am Ende!
+\usepackage{bookmark}

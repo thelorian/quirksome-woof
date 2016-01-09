@@ -1,0 +1,149 @@
+\input{Pack.tex}
+\begin{document}
+
+\section{Auswertung}
+\label{sec:Auswertung}
+
+
+Zur Veranschaulichung des Vorgangs der Wärmevverschiebung innerhalb der,
+Apparatur werden zunächst beide Temperaturverläufe aufgezeichnet und es wird durch beide jeweils ein Ausgleichspolynom dritten Grades gelegt,
+\begin{align*}
+  p(x) &= a_3t^3 + a_2t^2 + a_1t+a_0\\
+  \intertext{ mit }
+  a_{3,\text{warm}}&= \SI{-3,992e-3}{\kelvin\per\second\cubed}\\
+  a_{2,\text{warm}}&= \SI{1,118e-1}{\kelvin\per\second\squared}\\
+  a_{1,\text{warm}}&= \SI{8,558e-1}{\kelvin\per\second}\\
+  a_{0,\text{warm}}&= \SI{293,525}{\kelvin}\\
+  \\
+  a_{3,\text{kalt}}&= \SI{293,48}{\kelvin\per\second\cubed}\\
+  a_{2,\text{kalt}}&= \SI{293,52}{\kelvin\per\second}\\ 
+  a_{1,\text{kalt}}&= \SI{293,52}{\kelvin\per\second\squared}\\
+  a_{0,\text{kalt}}&= \SI{293,52}{\kelvin\per\second\cubed}\\
+\end{align*}
+
+\begin{table}
+\centering
+\caption{Temperatur im Verlauf der Messung}
+\label{tab:Dicke}
+  \begin{tabular}{ S[table-format=1,0] S[table-format=2,1] S[table-format=2,1] S[table-format=3,1]}
+    \toprule
+    t/ min & $T_1/\si{\kelvin}$ & $T_2/\si{\kelvin}$ & $P/\si{\watt}$\\
+    \midrule 
+    0   &  20,6 & 19,8 & 175,0\\
+    1   &  21,6 & 19,8 & 175,0\\
+    2   &  22,2 & 19,8 & 175,0\\
+    3   &  23,4 & 19,0 & 177,5\\
+    4   &  25,3 & 17,2 & 195,0\\
+    5   &  26,7 & 15,9 & 200,0\\
+    6   &  28,7 & 14,0 & 202,5\\
+    7   &  30,6 & 12,1 & 205,0\\
+    8   &  32,6 & 10,3 & 207,5\\
+    9   &  34,5 & 8,5  & 207,5\\
+    10  &  36,3 & 6,8  & 210,0\\
+    11  &  38,1 & 5,1  & 210,0\\
+    12  &  39,8 & 3,5  & 212,5\\
+    13  &  41,6 & 2,0  & 212,5\\
+    14  &  43,2 & 0,8  & 212,5\\
+    15  &  44,7 & 0,1  & 210,0\\
+    16  &  46,2 & -0,4 & 207,5\\
+    17  &  47,5 & -0,9 & 205,0\\
+    18  &  48,7 & -1,3 & 205,0\\
+    19  &  49,9 & -1,8 & 205,0\\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\begin{figure}
+  \centering
+  \includegraphics[width=\textwidth]{Temperatur.png}
+  \caption{Temperaturverlauf der Messung kubisch interpoliert,}
+  \label{fig:1}
+\end{figure}
+
+Aus den beiden Messreihen ergeben sich dann eine steigende Kurve für 
+$T_1$ und eine fallende für $T_2$ und die Differentialquotienten als
+
+\begin{table}
+\centering
+\caption{Differentialquotienten in verschiedenen Punkten}
+\label{tab:Dicke}
+  \begin{tabular}{ S[table-format=1,0] S[table-format=1,3] S[table-format=1,3] S[table-format=3,3] S[table-format=1,3]}
+    \toprule
+    $ t/\mathrm{min}$ & $\frac{\dif T_1}{\dif t}/\si{\kelvin\per\second}$& $\frac{\dif T_1}{\dif t}/\si{\kelvin\per\second}$
+    & $\nu/$ & $ \frac{\Del m}{\Del t}/\si{\kilogram \per\second}$ \\
+    \midrule 
+    4&  1,558 & -1,337  \\
+    6&  1,766 &-1,658  \\
+    10& 1,894 &-1,769 \\
+    13& 1,739 &-1,386 \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+Mit den Wärmekapazitäten von Wasser und der des Reservoir 1
+\begin{align*}
+  m_1c_W &=\SI{12600}{\joule\per\kelvin}\\
+  m_kc_k &=\SI{660}{\joule\per\kelvin}\\
+  \intertext{und der gemittelten Leistungsaufnahme}
+  N =\SI{200,5}{Watt}
+\end{align*}
+kann man nun die relative Güteziffer $\nu$ berechnen.
+
+\begin{align*}
+  \nu = \frac{\Del Q_1}{N\cdot \Del T} = \frac{m_1c_W+m_kc_k}{N}\frac{\Del T_1}{\Del t}\\
+\end{align*}
+
+Für die Berechnung des Massedurchsatzes muss der an de Manometern abgelesene Zusammenhang zwischen Druck und Temperatur genutzt werden um $L$ zu bestimmen.
+Die aus der linearen Ausgleichsrechnung erhaltenen Werte sind:
+\begin{align*}
+  &\text{Steigung } m = \num{-2520.89}
+  &\text{Achsenabschnitt } b = \num{21.83}
+  \intertext{und $L$ ergibt sich als}
+  &L = -m\cdot R = \num{20959.86}
+\end{align*}
+
+Damit ist es nun möglich den Massendurchsatz zu berechnen:
+\begin{align}
+  \frac{\Del m}{\Del t} &= \frac{\Del Q_2}{L\cdot\Del t} = \frac{m_2c_W+m_kc_k}{L}\frac{\Del T_2}{\Del t}\\
+\end{align}
+
+Zuletzt wird aus den Werten für den Druck in den Gasleitungen noch die mechanische Kompressorleistung $N_{\text{mech}}$ berechnet.
+
+\begin{table}
+\centering
+\caption{Temperatur im Verlauf der Messung}
+\label{tab:Dicke}
+  \begin{tabular}{ S[table-format=1,0] S[table-format=3,1] }
+    \toprule
+    $ t/\mathrm{min}$ & $p_1/\si{\pascal}$& $p_2/\si{\pascal}$\\
+    \midrule 
+    0   & 4.8  & 5   \\
+    1   & 2.2  & 5.5 \\
+    2   & 2.6  & 6.6 \\
+    3   & 2.8  & 7.04\\
+    4   & 3.0  & 7.6 \\
+    5   & 3.1  & 8   \\
+    6   & 3.2  & 8.4 \\
+    7   & 3.2  & 8.75\\
+    8   & 3.2  & 9.2 \\
+    9   & 3.2  & 9.5 \\
+    10  & 3.2  & 10.0\\
+    11  & 3.2  & 10.4\\
+    12  & 3.2  & 10.7\\
+    13  & 3.2  & 11.1\\
+    14  & 3.2  & 11.5\\
+    15  & 3.2  & 11.9\\
+    16  & 3.2  & 12.2\\
+    17  & 3.2  & 12.5\\
+    18  & 3.15 & 12.9\\
+    19  & 3.15 & 13.1\\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+
+
+
+
+
+\end{document}

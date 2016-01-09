@@ -1,0 +1,65 @@
+\section{Zielsetzung}
+In diesem Versuch wir untersucht werden wie verschiedene
+Metalle (Messing,Aluminium und Edelstahl) auf ein statisches und ein sich veränderndes Temperaturgefälle reagieren,
+insbesonndere welche Metalle besonders gute Wärmeleitfähigkeit besitzen. 
+Außerdem wird anhand zweier verschiedener Messingstäbe untersucht, inwiefen 
+sich die Form der Metallteile auf ihre Wärmeleitfähigkeit auswirkt.
+
+
+\section{Theorie}
+\label{sec:Theorie}
+
+Wenn in einem System ein Temperaturgefälle besteht, tritt entlang diesen Gefälles ein Wärmetransport auf.
+Dieser Austausch kann auf verschiedene Weisen einteten: durch Konvektion, durch Wärmstrahlung, und durch Wärmeleitung.
+In diesem Experiment wird sich auf die Wärmeleitung beschränkt. Diese kann in Festkörpern durch Anregung der Gittersturktur (Phononen) und über freie Elektronen geschehen.
+Wegen der hohen dicht von freien Elektronen in Metallen kann die Phononenübertragung vernachlässigt werden.
+
+Bei einem Stab mit Länge $L$ und Querschnitt $A$ aus einem Material mit der Dichte $\rho$
+und spezifischer Wärme $c$ bei dem da Gefälle entlang des Stabes besteht, ist die in $\dif{t}$ durch den Querschnitt des Stabes
+fließt
+\begin{equation}
+  \dif{Q} = -\kappa A \frac{\del{T}}{\del{x}}\dif{t}
+\end{equation}
+
+Der Proportionalitätsfaktor $\kappa$ ist dabei Wärmeleitfähigkeit. Für die Wärmestromdichte folgt dann
+\begin{equation}
+  j_w = -\kappa \frac{\del{T}}{\del{x}}.
+\end{equation}
+
+Zusammen mit der Kontinuitätsgleichung mit der Wärmedichte $\rho_Q = \frac{\del{Q}}{\del{V}}$
+\begin{equation}
+  \frac{\del{\rho_Q}}{\del{V}}+\nabla \vec{j_w} = 0
+\end{equation}
+folgt dann 
+\begin{equation}
+  \frac{\del{T}}{\del{t}} = \frac{\kappa}{\rho\cdot c}\frac{\del^2{T}}{\del{x}^2}
+\end{equation}
+die Wärmeleitungsgleichung, die den Zusammenhang zwischen räumlicher und zeitlicher Entwicklung der Temperaturvertilung herstellt.
+Der Proportionalitätsfaktor wird als Temperaturleitfähigkeit bezeichnet und gibt die Stärke des Wärmestroms an. 
+Wird wie im Experiment ein langer Stab verwendet und periodisch erwärmt und gekühlt ergibt sich die Lösung dieser DGL eine sich räumlich und zeitlich fortpflanzende Temperaturwelle:
+\begin{equation}
+  T(x,t) = T_{\text{max}}exp(-\sqrt{\frac{\omega\rho c}{2\kappa}}x) \cdot \cos{\omega t -\sqrt{\frac{\omega\rho c}{2\kappa}}}.
+\end{equation}
+Nach der Dispersionsrealtion für fortschreitende Wellen ergibt sich die Ausbreitungs- bzw. Phasengeschwindigkeit
+\begin{equation}
+  v = \frac{\omega}{k} = \frac{\omega}{\sqrt{\frac{\omega\rho c}{2\kappa}}} = \sqrt{\frac{2\kappa\omega}{\rho c}}
+\end{equation}
+
+Die Dämpfung der Welle ergibt sich als Differenz der Amplitude and einem Punkt nah am Erzeugungspunkt und einem weiteren, weiter entfernten:
+\begin{align}
+  A_{\text{nah}} &= T(x_{\text{nah}},t) \\
+  A_{\text{fern}} &= T(x_{\text{fern}},t)\\
+  \text{und mit den bekannten Identitäten bei periodischem Verhalten($T^*$ ist die Periodendauer, $\varphi$ die Phase)}
+  \omega &= 2\pi T^*
+  \varphi&= 2\pi \frac{\Delta t}{T^*}
+  \text{ergibt sich die Formel für die Wärmeleitfähigkeit}
+  \kappa &= \frac{\rho c (\Delta x)^2}{2\Delta t\cdot \ln{\frac{A_{\text{nah}}}{A_{\text{fern}}}}}
+\end{align}
+
+
+
+
+
+
+
+

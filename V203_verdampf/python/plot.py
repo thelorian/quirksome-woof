@@ -1,22 +1,32 @@
 import data
 import matplotlib.pyplot as plot
-import sys
+import numpy as np
+from scipy.optimize import curve_fit
+import calc
 
 x = 1 / data.low_pres.temp
-y = data.low_pres.pres
+y = np.log(data.low_pres.pres)
 
-plot.plot(x, y, 'r.', label='Dampfdruckkurve')
 
-plot.yscale('log')
-plot.xlabel('$T\;/\mathrm{{}^\circ C}$')
-plot.ylabel('Dampfdruck $p/\mathrm{Pa}$')
-# plot.ylim(5e3,2e5)
+def p(T, m, a):
+    return m * T + a
+params, covar = curve_fit(p,
+                          x,
+                          y,
+                          )
+error = np.sqrt(np.diag(covar))
+
+x_plot = np.linspace(365, 410)
+
+plot.plot(data.high_pres.temp, calc.all(data.high_pres.temp, *calc.params_high), 'r.')
+
+plot.xlabel('$T$ in $\mathrm{K }$')
+plot.ylabel('$p$ in $10^5 \mathrm{Pa}$')
+
 
 plot.grid()
 plot.legend(loc='best')
-plot.tight_layout(pad=0, h_pad=1.08, w_pad=1.08)
+plot.tight_layout(pad=1, h_pad=1.08, w_pad=1.08)
+plot.plot(x_plot, calc.all(x_plot, *calc.params_high), 'b-', linewidth=1)
 
-if len(sys.argv) > 1 and sys.argv[1] == "save":
-    plot.savefig('plots/low_press.pdf')
-else:
-    plot.show()
+plot.show()
