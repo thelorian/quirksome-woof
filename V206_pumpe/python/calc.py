@@ -41,7 +41,7 @@ def nu(m_1, m_2, dT, P):
 m1 = 12600
 m2 = 660
 
-print(nu(m1, m2, df(4, *params1), N), nu(m1, m2, df(6, *params1), N), nu(m1, m2, df(10, *params1), N), nu(m1, m2, df(13, *params1), N))
+print('nu', nu(m1, m2, df(4, *params1), N), nu(m1, m2, df(6, *params1), N), nu(m1, m2, df(10, *params1), N), nu(m1, m2, df(13, *params1), N))
 
 
 def gerade(T, m, b):
@@ -58,7 +58,7 @@ L = scipy.constants.R * paramsL[0]
 
 print('L', L)
 
-print(nu(m1, m2, df(4, *params2),  L), nu(m1, m2, df(6, *params2),  L), nu(m1, m2, df(10, *params2),  L), nu(m1, m2, df(13, *params2),  L))
+print('Massen', nu(m1, m2, df(4, *params2),  L), nu(m1, m2, df(6, *params2),  L), nu(m1, m2, df(10, *params2),  L), nu(m1, m2, df(13, *params2),  L))
 
 
 def N_mech(p_a, p_b, T2, t):

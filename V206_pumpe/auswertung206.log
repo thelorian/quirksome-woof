@@ -1,4 +1,4 @@
-This is LuaTeX, Version beta-0.80.0 (TeX Live 2015/Arch Linux) (rev 5238)  (format=lualatex 2015.12.3)  7 JAN 2016 12:53
+This is LuaTeX, Version beta-0.80.0 (TeX Live 2015/Arch Linux) (rev 5238)  (format=lualatex 2015.12.3)  10 JAN 2016 01:36
  restricted \write18 enabled.
 **auswertung206.tex
 (./auswertung206.tex
@@ -327,7 +327,7 @@ Lua-only attribute luaotfload@cursbase = 6
 Lua-only attribute luaotfload@curscurs = 7
 Lua-only attribute luaotfload@cursdone = 8
 Lua-only attribute luaotfload@state = 9
-luaotfload | main : fontloader loaded in 0.025 seconds
+luaotfload | main : fontloader loaded in 0.029 seconds
 Inserting `luaotfload.node_processor' at position 1 in `pre_linebreak_filter'.
 Inserting `luaotfload.node_processor' at position 1 in `hpack_filter'.
 Inserting `luaotfload.find_vf_file' at position 1 in `find_vf_file'.
@@ -1843,24 +1843,58 @@ load luc: /home/sirleonard/.texlive/texmf-var/luatex-cache/generic/fonts/otf/lmr
 oman5-regular.luc)(compiling luc: /var/lib/texmf/luatex-cache/generic/fonts/otf/
 lmroman8-bold.luc)(load luc: /home/sirleonard/.texlive/texmf-var/luatex-cache/ge
 neric/fonts/otf/lmroman8-bold.luc)
+<Temperatur.png, id=4, 578.16pt x 433.62pt>
+File: Temperatur.png Graphic file (type png)
+ <use Temperatur.png>
+Package pdftex.def Info: Temperatur.png used on input line 63.
+(pdftex.def)             Requested size: 418.25555pt x 313.68826pt.
+ [1
 
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-!
-! siunitx error: "unknown-option"
-! 
-! Unknown option '0'.
-! 
-! See the siunitx documentation for further information.
-! 
-! For immediate help type H <return>.
-!...............................................  
-                                                  
-l.30     t
-        /\mathrm{min} & $T_1/\si{\kelvin}$ & $T_2/\si{\kelvin}$ & $P/\si{\wa...
-? h
-|'''''''''''''''''''''''''''''''''''''''''''''''
-| The option file '0' is not known by siunitx:perhaps it is spelled
-| incorrectly.
-|...............................................Type <return> to proceed, S to s
-croll future error messages,
-R to run without stopping, 
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2<./Temperatur.png>]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 154.
+ [3] [4]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 154.
+
+(./auswertung206.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 154.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 154.
+
+
+Package rerunfilecheck Warning: File `auswertung206.aux' has changed. Rerun.
+
+Package rerunfilecheck Info: Checksums for `auswertung206.aux':
+(rerunfilecheck)             Before: D77F20BA7B6449707255C5EA36731C24;2801
+(rerunfilecheck)             After:  EE146E6FB668DB9113E99E365D30694B;2801.
+
+LaTeX Warning: There were multiply-defined labels.
+
+Package logreq Info: Writing requests to 'auswertung206.run.xml'.
+
+\openout1 = auswertung206.run.xml
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 154.
+)
+
+Here is how much of LuaTeX's memory you used:
+ 39711 strings out of 494897
+ 100000,1373583 words of node,token memory allocated
+ 462 words of node memory still in use:
+   7 hlist, 2 vlist, 2 rule, 2 glue, 2 kern, 8 attribute, 60 glue_spec, 8 attrib
+ute_list, 1 write nodes
+   avail lists: 1:1,2:3272,3:102,4:1072,5:86,6:943,7:59,8:5,9:397,10:91
+ 42426 multiletter control sequences out of 65536+600000
+ 62 fonts using 13645727 bytes
+ 70i,26n,112p,1252b,1029s stack positions out of 5000i,500n,10000p,200000b,100000s
+</usr/share/texmf-dist/fonts/opentype/public/lm-math/latinmodern-math.otf></usr/
+share/texmf-dist/fonts/opentype/public/lm/lmroman8-bold.otf></usr/share/texmf-di
+st/fonts/opentype/public/lm/lmroman8-regular.otf></usr/share/texmf-dist/fonts/op
+entype/public/lm-math/latinmodern-math.otf></usr/share/texmf-dist/fonts/opentype
+/public/lm-math/latinmodern-math.otf></usr/share/texmf-dist/fonts/opentype/publi
+c/lm/lmroman10-regular.otf></usr/share/texmf-dist/fonts/opentype/public/lm/lmsan
+s10-bold.otf>
+Output written on auswertung206.pdf (4 pages, 61378 bytes).
+
+PDF statistics: 87 PDF objects out of 1000 (max. 8388607)
+ 57 compressed objects within 1 object stream
+ 12 named destinations out of 1000 (max. 131072)
+ 9 words of extra memory for PDF output out of 10000 (max. 10000000)
+
