@@ -7,27 +7,32 @@
 
 Zur Veranschaulichung des Vorgangs der Wärmevverschiebung innerhalb der,
 Apparatur werden zunächst beide Temperaturverläufe aufgezeichnet und es wird durch beide jeweils ein Ausgleichspolynom dritten Grades gelegt,
-\begin{align*}
-  p(x) &= a_3t^3 + a_2t^2 + a_1t+a_0\\
-  \intertext{ mit }
-  a_{3,\text{warm}}&= \SI{-3,992e-3}{\kelvin\per\second\cubed}\\
-  a_{2,\text{warm}}&= \SI{1,118e-1}{\kelvin\per\second\squared}\\
-  a_{1,\text{warm}}&= \SI{8,558e-1}{\kelvin\per\second}\\
-  a_{0,\text{warm}}&= \SI{293,525}{\kelvin}\\
-  \\
-  a_{3,\text{kalt}}&= \SI{293,48}{\kelvin\per\second\cubed}\\
-  a_{2,\text{kalt}}&= \SI{293,52}{\kelvin\per\second}\\ 
-  a_{1,\text{kalt}}&= \SI{293,52}{\kelvin\per\second\squared}\\
-  a_{0,\text{kalt}}&= \SI{293,52}{\kelvin\per\second\cubed}\\
-\end{align*}
+\begin{equation*}
+p(t) = a_3t^3 + a_2t^2 + a_1t+a_0\\
+\end{equation*}
+mit
+\begin{equation*}
+\begin{aligned}[c]
+a_{3,\text{warm}} &= \SI{-3,992e-3}{\kelvin\per\second\cubed}\\
+a_{2,\text{warm}} &= \SI{0,1118}{\kelvin\per\second\squared}\\
+a_{1,\text{warm}} &= \SI{0,8558}{\kelvin\per\second}\\  a_{0,\text{warm}} &= \SI{293,525}{\kelvin}\\
+\end{aligned}
+\qquad
+\begin{aligned}[c]
+a_{3,\text{kalt}}&= \SI{7,393e-03}{\kelvin\per\second\cubed}\\
+a_{2,\text{kalt}}&= \SI{0,1912}{\kelvin\per\second\squared}\\ 
+a_{1,\text{kalt}}&= \SI{-0,1619}{\kelvin\per\second}\\
+a_{0,\text{kalt}}&= \SI{293,481}{\kelvin}.\\
+\end{aligned}
+\end{equation*}
 
-\begin{table}
+\begin{table}[H]
 \centering
 \caption{Temperatur im Verlauf der Messung}
 \label{tab:Dicke}
-  \begin{tabular}{ S[table-format=1,0] S[table-format=2,1] S[table-format=2,1] S[table-format=3,1]}
+  \begin{tabular}{c c c c}
     \toprule
-    t/ min & $T_1/\si{\kelvin}$ & $T_2/\si{\kelvin}$ & $P/\si{\watt}$\\
+    $t/ \si{\minute}$ & $T_1/\si{\kelvin}$ & $T_2/\si{\kelvin}$ & $P/\si{\watt}$\\
     \midrule 
     0   &  20,6 & 19,8 & 175,0\\
     1   &  21,6 & 19,8 & 175,0\\
@@ -53,32 +58,15 @@ Apparatur werden zunächst beide Temperaturverläufe aufgezeichnet und es wird d
   \end{tabular}
 \end{table}
 
-\begin{figure}
+\begin{figure}[H]
   \centering
   \includegraphics[width=\textwidth]{Temperatur.png}
-  \caption{Temperaturverlauf der Messung kubisch interpoliert,}
+  \caption{Temperaturverlauf der Messung kubisch interpoliert.}
   \label{fig:1}
 \end{figure}
 
 Aus den beiden Messreihen ergeben sich dann eine steigende Kurve für 
-$T_1$ und eine fallende für $T_2$ und die Differentialquotienten als
-
-\begin{table}
-\centering
-\caption{Differentialquotienten in verschiedenen Punkten}
-\label{tab:Dicke}
-  \begin{tabular}{ S[table-format=1,0] S[table-format=1,3] S[table-format=1,3] S[table-format=3,3] S[table-format=1,3]}
-    \toprule
-    $ t/\mathrm{min}$ & $\frac{\dif T_1}{\dif t}/\si{\kelvin\per\second}$& $\frac{\dif T_1}{\dif t}/\si{\kelvin\per\second}$
-    & $\nu/$ & $ \frac{\Del m}{\Del t}/\si{\kilogram \per\second}$ \\
-    \midrule 
-    4&  1,558 & -1,337  \\
-    6&  1,766 &-1,658  \\
-    10& 1,894 &-1,769 \\
-    13& 1,739 &-1,386 \\
-    \bottomrule
-  \end{tabular}
-\end{table}
+$T_1$ und eine fallende für $T_2$ und die Differentialquotienten.
 
 Mit den Wärmekapazitäten von Wasser und der des Reservoir 1
 \begin{align*}
@@ -87,10 +75,10 @@ Mit den Wärmekapazitäten von Wasser und der des Reservoir 1
   \intertext{und der gemittelten Leistungsaufnahme}
   N =\SI{200,5}{Watt}
 \end{align*}
-kann man nun die relative Güteziffer $\nu$ berechnen.
+kann man nun die relative Güteziffer $\nu$ berechnen
 
 \begin{align*}
-  \nu = \frac{\Del Q_1}{N\cdot \Del T} = \frac{m_1c_W+m_kc_k}{N}\frac{\Del T_1}{\Del t}\\
+  \nu = \frac{\Delta Q_1}{N\cdot \Delta T} = \frac{m_1c_W+m_kc_k}{N}\frac{\Delta T_1}{\Delta t}.\\
 \end{align*}
 
 Für die Berechnung des Massedurchsatzes muss der an de Manometern abgelesene Zusammenhang zwischen Druck und Temperatur genutzt werden um $L$ zu bestimmen.
@@ -103,9 +91,26 @@ Die aus der linearen Ausgleichsrechnung erhaltenen Werte sind:
 \end{align*}
 
 Damit ist es nun möglich den Massendurchsatz zu berechnen:
-\begin{align}
-  \frac{\Del m}{\Del t} &= \frac{\Del Q_2}{L\cdot\Del t} = \frac{m_2c_W+m_kc_k}{L}\frac{\Del T_2}{\Del t}\\
-\end{align}
+\begin{align*}
+  \frac{\Delta m}{\Delta t} &= \frac{\Delta Q_2}{L\cdot\Delta t} = \frac{m_2c_W+m_kc_k}{L}\frac{\Delta T_2}{\Delta t}\\
+\end{align*}
+
+\begin{table}[H]
+\centering
+\caption{Differentialquotienten in verschiedenen Punkten}
+\label{tab:Dicke}
+  \begin{tabular}{c c c c c}
+    \toprule
+    $ t/\mathrm{min}$ & $\frac{\mathrm{d}{T_1}}{\mathrm{d}{t} }/\si{\kelvin\per\second}$& $\frac{\mathrm{d}{T_1}}{\mathrm{d}{t} }/\si{\kelvin\per\second}$
+    & $\nu/$ & $ \frac{\Delta m}{\Delta t}/\si{\kilogram \per\second}$ \\
+    \midrule 
+    4&  1,558 & -1,337 & 103.089 & 0.845 \\
+    6&  1,766 &-1,658 & 116.830 & 1.049 \\
+    10& 1,894 &-1,769 & 125.304 & 1.119\\
+    13& 1,739 &-1,386 & 115.027 & 0.877\\
+    \bottomrule
+  \end{tabular}
+\end{table}
 
 Zuletzt wird aus den Werten für den Druck in den Gasleitungen noch die mechanische Kompressorleistung $N_{\text{mech}}$ berechnet.
 
@@ -113,7 +118,7 @@ Zuletzt wird aus den Werten für den Druck in den Gasleitungen noch die mechanis
 \centering
 \caption{Temperatur im Verlauf der Messung}
 \label{tab:Dicke}
-  \begin{tabular}{ S[table-format=1,0] S[table-format=3,1] }
+  \begin{tabular}{c c c}
     \toprule
     $ t/\mathrm{min}$ & $p_1/\si{\pascal}$& $p_2/\si{\pascal}$\\
     \midrule 
